@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="InventarioFerreteria/InventarioFerreteria.vbproj" />
+  <Folder Name="/src/">
+    <Project Path="src/InventarioFerreteria/InventarioFerreteria.vbproj" />
+  </Folder>
 </Solution>
