@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows</TargetFramework>
-    <RootNamespace>InventarioFerreteria</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
-    <UseWindowsForms>true</UseWindowsForms>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<RootNamespace>InventarioFerreteria</RootNamespace>
+		<!-- Punto de entrada explícito: Program.vb -->
+		<MyType>WindowsFormsWithCustomSubMain</MyType>
+		<StartupObject>InventarioFerreteria.Program</StartupObject>
+		<OptionExplicit>On</OptionExplicit>
+		<OptionStrict>Off</OptionStrict>
+		<OptionInfer>On</OptionInfer>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Import Include="System.Data" />
-    <Import Include="System.Drawing" />
-    <Import Include="System.Windows.Forms" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="MySqlConnector" Version="2.4.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- Único paquete NuGet: proveedor ADO.NET para MariaDB/MySQL -->
+		<PackageReference Include="MySqlConnector" Version="2.4.0" />
+	</ItemGroup>
 
 </Project>
