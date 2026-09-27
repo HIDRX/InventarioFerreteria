@@ -1,5 +1,21 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/InventarioFerreteria/InventarioFerreteria.vbproj" />
-  </Folder>
-</Solution>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>InventarioFerreteria</RootNamespace>
+    <!-- Punto de entrada explícito: Program.vb -->
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <StartupObject>InventarioFerreteria.Program</StartupObject>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Único paquete NuGet: proveedor ADO.NET para MariaDB/MySQL -->
+    <PackageReference Include="MySqlConnector" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
