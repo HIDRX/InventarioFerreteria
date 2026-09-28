@@ -1,11 +1,14 @@
-﻿Friend Module Program
+Imports System.Windows.Forms
 
-    <STAThread()>
-    Friend Sub Main(args As String())
+' Punto de entrada de la aplicación (MyType = WindowsFormsWithCustomSubMain)
+Module Program
+
+    <STAThread>
+    Sub Main()
         Application.SetHighDpiMode(HighDpiMode.SystemAware)
         Application.EnableVisualStyles()
         Application.SetCompatibleTextRenderingDefault(False)
-        Application.Run(New Form1)
+        Application.Run(New FrmProductos())
     End Sub
 
 End Module
